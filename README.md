@@ -1,2 +1,2 @@
-# Confeitaria_Aparecida_Site
+# Confeitaria
  Um site de apresentação/divulgação de uma confeitaria
