@@ -1,0 +1,101 @@
+/* Box sizing border-box para todos os elementos */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove espaçamentos padrão do body */
+body {
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Remove decoração de links */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Remove estilos padrão de listas */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Reset para imagens */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Reset para botões */
+button,
+input,
+textarea,
+select {
+  font: inherit;
+  border: none;
+  background: none;
+  outline: none;
+}
+
+/* Corrige fontes inconsistentes em inputs e botões */
+input,
+textarea,
+button,
+select {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+}
+
+/* Remove bordas de botões em alguns navegadores */
+button {
+  cursor: pointer;
+}
+
+/* Remove estilos padrão do fieldset */
+fieldset {
+  border: none;
+}
+
+/* Força vídeos e iframes a serem responsivos */
+iframe,
+video {
+  max-width: 100%;
+  display: block;
+}
+
+/* Adiciona comportamento consistente ao HTML5 */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section {
+  display: block;
+}
+
+/* Remove estilos padrão do table */
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+/* Garante que elementos escondidos via "hidden" não ocupem espaço */
+[hidden] {
+  display: none !important;
+}

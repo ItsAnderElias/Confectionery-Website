@@ -1,0 +1,265 @@
+/* Definição de variáveis globais */
+:root {
+    --primary-color: #f8c3c3; /* Rosa claro de fundo */
+    --secondary-color: #ffffff; /* Branco do círculo */
+    --accent-color: #d64574; /* Rosa escuro dos traços */
+    --text-color: #000000; /* Preto do texto */
+    --bg-color: #47271a;/* Cor background cabeçalhos */
+    --font-primary: 'Dancing Script', cursive; /* Fonte manuscrita */
+    --font-secondary: 'Lora', serif; /* Fonte para detalhes */
+  }
+  
+  /* Reset básico */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  /* Transição suave para a navegação */
+  html {
+    scroll-behavior: smooth;
+}
+  /* Estilização do corpo */
+  body {
+    background: var(--primary-color);
+    color: var(--text-color);
+    font-family: var(--font-secondary);
+    overflow: hidden;
+  }
+  
+  /* Estilização do cabeçalho */
+  h1, h2, h3 {
+    font-family: var(--font-primary);
+  }
+  
+  /* Links */
+  a {
+    text-decoration: none;
+    color: var(--secondary-color);
+  }
+  
+  a:hover {
+    color: var(--accent-color);
+  }
+  
+  /* Estilização do Cabeçalho */
+  header {
+    background: var(--bg-color);
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5vw 1.5vw 0.5vw 0.5vw;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 5vh;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+header .logo {
+    width: 4vh;
+}
+@media (max-width: 1000px) {
+    header {
+        width: 100vw;
+    }
+}
+footer {
+  background: var(--bg-color);
+  color: var(--secondary-color);
+  font-family: var(--font-secondary);
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 0.5vw;
+}
+@media (max-width: 1000px){
+  nav ul li {
+    margin: 0 1.3vw;
+  }
+}
+
+nav ul li a {
+    transition: all 1s ease-in-out;
+}
+
+  /* Estilização das Páginas */
+section {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  height: 100vh;
+  width: 100vw;
+  padding-top: 5vh;
+  overflow: hidden;
+}
+
+  /* Estilização das Homepage */
+#home {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    flex-shrink: 3;
+    justify-content: start;
+  }
+    /* Estilização específica do nome da confeitaria */
+    #home .logo-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 20%;
+      overflow: hidden;
+      margin-bottom: 3%;
+    }
+#home .logo-text {
+      font-family: var(--font-primary);
+      font-size: 8dvw;
+      transition: all 1s ease-in-out;
+    }
+#home .logo-text:hover {
+      color: var(--accent-color);
+    }
+  /* Container principal do álbum */
+#home .album-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1%;
+    justify-content: center; /* Para centralizar o conteúdo */
+    overflow: hidden;
+}
+
+/* Estilo para cada foto */
+#home .photo {
+    width: calc(20% - 1%);
+    margin-bottom: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Estilo das imagens dentro do álbum */
+#home .photo img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Efeito de hover nas imagens */
+#home .photo img:hover {
+    opacity: 0.5;
+    transform: scale(1.05); /* Aumenta a imagem levemente ao passar o mouse */
+}
+
+#home .foto1:hover {
+    content: url(../img/pictures/desktop/foto-desc-1.png);
+}
+#home .foto2:hover {
+    content: url(../img/pictures/desktop/foto-desc-2.png);
+}
+#home .foto3:hover {
+    content: url(../img/pictures/desktop/foto-desc-3.png);
+}
+#home .foto4:hover {
+    content: url(../img/pictures/desktop/foto-desc-4.png);
+}
+
+/* Responsividade: 2 fotos por linha em telas menores */
+@media (max-width: 1000px) {
+    #home .photo {
+        width: calc(50% - 15px); /* Duas fotos por linha */
+    }
+}
+
+#about {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+#about h1,h2 {
+  font-size: 4.5vh;
+  overflow-y: scroll;
+}
+@media (max-width: 1000px) {
+  #about h1,h2 {
+    font-size: 2.8vh;
+    overflow-y: scroll;
+  }
+}
+#contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-content: center;
+}
+#contact .whatsapp {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+#contact .instagram {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+#contact img {
+  display: flex;
+  width: 10vw;
+}
+#contact .instagram-img:hover {
+  content: url(../img/icons/desktop/instagram-icon-hover.png);
+}
+#contact .wpp-img:hover {
+  content: url(../img/icons/desktop/whatsapp-icon-hover.png);
+}
+#contact .adress {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 1vw;
+  max-width: 50vw;
+}
+#contact .adress h1 {
+  font-size: 3vw;
+}
+@media (max-width: 1000px) { 
+  #contact img {
+    width: 20vw;
+  }
+  #contact .adress {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      margin-top: 2vh;
+  }
+  #contact .adress h1 {
+    font-size: 3vh;
+  }
+  #contact .map {
+      width: 200px;
+      height: 100px;
+      display: flex;
+      justify-content: center;
+  }
+}
