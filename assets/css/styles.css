@@ -1,3 +1,4 @@
+@import url(./reset.css);
 /* Definição de variáveis globais */
 :root {
     --primary-color: #f8c3c3; /* Rosa claro de fundo */
